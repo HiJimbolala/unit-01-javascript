@@ -7,7 +7,24 @@
 </head>
 <body>
     <script>
-                
+        let score = 10;              // 1 it's 10!
+        score += 5;                  // 2 it's 15!
+        score *= 2;                  // 3 it's 30!
+        let bonus = score % 7;       // 4 it's 2!
+        score -= bonus;              // 5 it's 28!
+        let old = ++score;           // 6 it's 28!
+        let next = ++score;          // 7 it's 29!
+        score /= 3;                  // 8 it's 10!
+        bonus--;                     // 9 it's 1!
+        score = score + bonus * 4;   // 10 it's 14!
+        console.log(score, bonus, old, next);
+    // 1. Why is old 28 but score 29 after line 6?
+    // A: Because we defined it as the current score then added on to it on line 6
+    // 2. Why doesn’t line 10 give 44?
+    // A: Because we multiple bonus to 4 then add it to score so it is 14
+    // 3. What would score be if line 3 came before line 2?
+    // A: 19.666666666666668
+    // modified: old will be 29, next is 30, and score is 14 
     </script>
 </body>
 </html>
