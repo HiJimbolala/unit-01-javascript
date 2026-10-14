@@ -8,16 +8,36 @@
 <body>
     <script>
         function showBanner() {
-            
+            console.log("====================")
+            console.log("  GUESS THE NUMBER  ")
+            console.log("====================")
         }
-        console.log(showBanner)
+
+        showBanner()
+        showBanner()
+        
     </script>
 
     <script>
         function yourName(name) {
             console.log("Hello, my name is " + name)
         }
-        yourName(jimmy)
+        yourName("jimbo")
+        yourName("lala")
+        yourName("Rosario")
+    </script>
+
+    <script>
+        function calculateTip(bill, pct) {
+            let tip = bill * (pct / 100)
+            return tip
+        }
+
+        let tip = calculateTip(80, 15)
+        console.log(tip.toFixed(2))
+        tip = calculateTip(50, 20) 
+        console.log(tip.toFixed(2))
+        
     </script>
 </body>
 </html>
