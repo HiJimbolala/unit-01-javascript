@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gradebook</title>
+</head>
+<body>
+  <h1>Period 3 Gradebook</h1>
+  <ul id="gradebook"></ul>
+  <h2>Honor Roll</h2>
+  <ul id="honor"></ul>
+
+  <script>
+    let students = [
+      { name: "Maya", average: 94.5 },
+      { name: "Leo", average: 81.4 },
+      { name: "Priya", average: 67.8 },
+      { name: "Sam", average: 88 },
+      { name: "Jordan", average: 72.3 }
+    ];
+
+    // Write your code here, one comment above each task
+    let list = document.getElementById("gradebook")
+    for (let i = 0; i < students.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = students[i];
+        list.appendChild(li);
+    }
+  </script>
+</body>
+</html>
