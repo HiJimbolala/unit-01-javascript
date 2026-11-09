@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Order</title>
+</head>
+<body>
+  <h1>Pizza Order</h1>
+  <form name="order">
+    <p>Name: <input type="text" id="custName"> <span id="nameError"></span></p>
+    <p>Quantity: <input type="text" id="qty"> <span id="qtyError"></span></p>
+    <p>Promo code: <input type="text" id="promo"> <span id="promoError"></span></p>
+    <p>Phone: <input type="text" id="phone"> <span id="phoneError"></span></p>
+    <button type="button" id="orderBtn">Place order</button>
+  </form>
+  <p id="orderStatus"></p>
+  <script>
+    let custName = document.getElementById("custName");
+    let qty = document.getElementById("qty");
+    let promo = document.getElementById("promo");
+    let phone = document.getElementById("phone");
+
+    // Write your code below
+    function showError(id, message) {
+        document.getElementById(id).textContent = message
+        document.getElementById(id).style.color = "red"
+    }
+    function checkName() {
+        if (x){
+            
+        }
+    }
+  </script>
+</body>
+</html>
