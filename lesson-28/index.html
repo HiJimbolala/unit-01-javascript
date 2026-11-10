@@ -24,10 +24,40 @@
         document.getElementById(id).textContent = message
         document.getElementById(id).style.color = "red"
     }
+    
     function checkName() {
-        if (x){
-            
+        if (custName.value.trim() === ""){
+            showError("nameError", "Enter your name.")
+            return false
+        } else {
+          showError("nameError", "")
+          return true
         }
+    }
+
+    function checkQty() {
+      if (qty.value.trim() === "") {
+      showError("qtyError", "Enter a quantity.")
+      return false
+      } else if  (isNaN(qty.value)) {
+        showError("qtyError", "Quantity must be a number.")
+        return false
+      } else if (qty.value < 1 || qty.value > 10) { 
+        showError("qtyError", "Order 1 to 10 pizzas.")
+        return false
+      } else {
+        return true
+      }
+    }
+
+    function checkPromo () {
+      if (promo.value.trim() === "") {
+        return false
+      } else if (promo.value.trim().toLowerCase() === "pizza5") {
+        return true
+      } else {
+        return false
+      }
     }
   </script>
 </body>
